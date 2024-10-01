@@ -1,0 +1,16 @@
+C:\Users\p467103\Desktop\MSSS Master File Project - Dictionary\MSSS Master File Project - Dictionary\bin\Debug\net8.0-windows\MSSS Master File Project - Dictionary.exe
+C:\Users\p467103\Desktop\MSSS Master File Project - Dictionary\MSSS Master File Project - Dictionary\bin\Debug\net8.0-windows\MSSS Master File Project - Dictionary.deps.json
+C:\Users\p467103\Desktop\MSSS Master File Project - Dictionary\MSSS Master File Project - Dictionary\bin\Debug\net8.0-windows\MSSS Master File Project - Dictionary.runtimeconfig.json
+C:\Users\p467103\Desktop\MSSS Master File Project - Dictionary\MSSS Master File Project - Dictionary\bin\Debug\net8.0-windows\MSSS Master File Project - Dictionary.dll
+C:\Users\p467103\Desktop\MSSS Master File Project - Dictionary\MSSS Master File Project - Dictionary\bin\Debug\net8.0-windows\MSSS Master File Project - Dictionary.pdb
+C:\Users\p467103\Desktop\MSSS Master File Project - Dictionary\MSSS Master File Project - Dictionary\obj\Debug\net8.0-windows\MSSS_Master_File_Project___Dictionary.Form1.resources
+C:\Users\p467103\Desktop\MSSS Master File Project - Dictionary\MSSS Master File Project - Dictionary\obj\Debug\net8.0-windows\MSSS Master File Project - Dictionary.csproj.GenerateResource.cache
+C:\Users\p467103\Desktop\MSSS Master File Project - Dictionary\MSSS Master File Project - Dictionary\obj\Debug\net8.0-windows\MSSS Master File Project - Dictionary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\p467103\Desktop\MSSS Master File Project - Dictionary\MSSS Master File Project - Dictionary\obj\Debug\net8.0-windows\MSSS Master File Project - Dictionary.AssemblyInfoInputs.cache
+C:\Users\p467103\Desktop\MSSS Master File Project - Dictionary\MSSS Master File Project - Dictionary\obj\Debug\net8.0-windows\MSSS Master File Project - Dictionary.AssemblyInfo.cs
+C:\Users\p467103\Desktop\MSSS Master File Project - Dictionary\MSSS Master File Project - Dictionary\obj\Debug\net8.0-windows\MSSS Master File Project - Dictionary.csproj.CoreCompileInputs.cache
+C:\Users\p467103\Desktop\MSSS Master File Project - Dictionary\MSSS Master File Project - Dictionary\obj\Debug\net8.0-windows\MSSS Master File Project - Dictionary.dll
+C:\Users\p467103\Desktop\MSSS Master File Project - Dictionary\MSSS Master File Project - Dictionary\obj\Debug\net8.0-windows\refint\MSSS Master File Project - Dictionary.dll
+C:\Users\p467103\Desktop\MSSS Master File Project - Dictionary\MSSS Master File Project - Dictionary\obj\Debug\net8.0-windows\MSSS Master File Project - Dictionary.pdb
+C:\Users\p467103\Desktop\MSSS Master File Project - Dictionary\MSSS Master File Project - Dictionary\obj\Debug\net8.0-windows\MSSS Master File Project - Dictionary.genruntimeconfig.cache
+C:\Users\p467103\Desktop\MSSS Master File Project - Dictionary\MSSS Master File Project - Dictionary\obj\Debug\net8.0-windows\ref\MSSS Master File Project - Dictionary.dll
