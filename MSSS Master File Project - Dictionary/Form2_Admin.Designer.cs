@@ -94,6 +94,7 @@
             listBox_Selectable.Name = "listBox_Selectable";
             listBox_Selectable.Size = new Size(178, 349);
             listBox_Selectable.TabIndex = 11;
+            listBox_Selectable.SelectedIndexChanged += listBox_Selectable_SelectedIndexChanged;
             // 
             // listBox_ReadOnly
             // 
