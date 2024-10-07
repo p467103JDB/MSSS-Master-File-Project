@@ -32,27 +32,37 @@
             listBox_Selectable = new ListBox();
             textBox_Search_Value = new TextBox();
             textBox_Search_Key = new TextBox();
+            menuStrip1 = new MenuStrip();
+            fileToolStripMenuItem = new ToolStripMenuItem();
+            openFileToolStripMenuItem = new ToolStripMenuItem();
+            quitToolStripMenuItem = new ToolStripMenuItem();
+            label1 = new Label();
+            label2 = new Label();
+            statusStrip1 = new StatusStrip();
+            toolStripStatus = new ToolStripStatusLabel();
+            menuStrip1.SuspendLayout();
+            statusStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // listBox_ReadOnly
             // 
             listBox_ReadOnly.FormattingEnabled = true;
             listBox_ReadOnly.ItemHeight = 15;
-            listBox_ReadOnly.Location = new Point(32, 128);
+            listBox_ReadOnly.Location = new Point(32, 68);
             listBox_ReadOnly.Name = "listBox_ReadOnly";
             listBox_ReadOnly.SelectionMode = SelectionMode.None;
-            listBox_ReadOnly.Size = new Size(178, 289);
+            listBox_ReadOnly.Size = new Size(178, 349);
             listBox_ReadOnly.TabIndex = 0;
             // 
             // listBox_Selectable
             // 
             listBox_Selectable.FormattingEnabled = true;
             listBox_Selectable.ItemHeight = 15;
-            listBox_Selectable.Location = new Point(256, 128);
+            listBox_Selectable.Location = new Point(256, 68);
             listBox_Selectable.Name = "listBox_Selectable";
-            listBox_Selectable.SelectionMode = SelectionMode.None;
-            listBox_Selectable.Size = new Size(178, 289);
+            listBox_Selectable.Size = new Size(178, 349);
             listBox_Selectable.TabIndex = 1;
+            listBox_Selectable.SelectedIndexChanged += listBox_Selectable_SelectedIndexChanged;
             // 
             // textBox_Search_Value
             // 
@@ -70,17 +80,90 @@
             textBox_Search_Key.TabIndex = 3;
             textBox_Search_Key.TextChanged += textBox_Search_Key_TextChanged;
             // 
+            // menuStrip1
+            // 
+            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(800, 24);
+            menuStrip1.TabIndex = 4;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { openFileToolStripMenuItem, quitToolStripMenuItem });
+            fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            fileToolStripMenuItem.Size = new Size(37, 20);
+            fileToolStripMenuItem.Text = "File";
+            // 
+            // openFileToolStripMenuItem
+            // 
+            openFileToolStripMenuItem.Name = "openFileToolStripMenuItem";
+            openFileToolStripMenuItem.Size = new Size(180, 22);
+            openFileToolStripMenuItem.Text = "Open file";
+            openFileToolStripMenuItem.Click += openFileToolStripMenuItem_Click;
+            // 
+            // quitToolStripMenuItem
+            // 
+            quitToolStripMenuItem.Name = "quitToolStripMenuItem";
+            quitToolStripMenuItem.Size = new Size(180, 22);
+            quitToolStripMenuItem.Text = "Quit";
+            quitToolStripMenuItem.Click += quitToolStripMenuItem_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(440, 110);
+            label1.Name = "label1";
+            label1.Size = new Size(69, 15);
+            label1.TabIndex = 5;
+            label1.Text = "Staff Name:";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(440, 164);
+            label2.Name = "label2";
+            label2.Size = new Size(48, 15);
+            label2.TabIndex = 6;
+            label2.Text = "Staff ID:";
+            // 
+            // statusStrip1
+            // 
+            statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripStatus });
+            statusStrip1.Location = new Point(0, 428);
+            statusStrip1.Name = "statusStrip1";
+            statusStrip1.Size = new Size(800, 22);
+            statusStrip1.TabIndex = 7;
+            statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatus
+            // 
+            toolStripStatus.Name = "toolStripStatus";
+            toolStripStatus.Size = new Size(0, 17);
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(statusStrip1);
+            Controls.Add(label2);
+            Controls.Add(label1);
             Controls.Add(textBox_Search_Key);
             Controls.Add(textBox_Search_Value);
             Controls.Add(listBox_Selectable);
             Controls.Add(listBox_ReadOnly);
+            Controls.Add(menuStrip1);
+            KeyPreview = true;
+            MainMenuStrip = menuStrip1;
             Name = "Form1";
             Text = "MSSS - General UI";
+            KeyDown += Form1_KeyDown;
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
+            statusStrip1.ResumeLayout(false);
+            statusStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -91,5 +174,13 @@
         private ListBox listBox_Selectable;
         private TextBox textBox_Search_Value;
         private TextBox textBox_Search_Key;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem fileToolStripMenuItem;
+        private ToolStripMenuItem openFileToolStripMenuItem;
+        private ToolStripMenuItem quitToolStripMenuItem;
+        private Label label1;
+        private Label label2;
+        private StatusStrip statusStrip1;
+        private ToolStripStatusLabel toolStripStatus;
     }
 }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MSSS Master File Project - Dictionary")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f6895cf422ab400329809673e2689b850471fb44")]
 [assembly: System.Reflection.AssemblyProductAttribute("MSSS Master File Project - Dictionary")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MSSS Master File Project - Dictionary")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
