@@ -7,12 +7,32 @@ namespace MSSS_Master_File_Project___Dictionary
 {
     public partial class Form1 : Form
     {
+        /// <summary>
+        /// Project Details ///
+        /// Student ID: P467103
+        /// Student Name: JACK DU BOULAY
+        /// 
+        /// Program Explanation ///
+        /// This Program showcases how to use a .csv file.
+        /// It demonstrates how to open and read a csv file as well as write to one.
+        /// The program also shows how to use an unsorted dictionary using key value pairs.
+        /// 
+        /// Program Keyboard Shortcuts ///
+        /// F4 - Clears Value textbox
+        /// F5 - Clears Key textbox
+        /// Alt + A - Access Admin GUI Edit Mode (Select an index to use the edit function) <--- IMPORTANT
+        /// Alt + A - Access Admin GUI Add Mode (Type 77 in the key textbox) <--- IMPORTANT
+        /// 
+        /// </summary>
+
         public Form1()
         {
             InitializeComponent();
             // Set key preview true to allow the key press listener:  https://youtu.be/ogVAU54EQFg?t=360
             this.KeyDown += new KeyEventHandler(Form1_KeyDown);
             toolStripStatus.Text = "Program launched successfully.";
+
+            LoadCSV();
         }
         // Question 4.1 - Create Dictionary Data Structure that is public and static
         public static Dictionary<int, string> MasterFile = new Dictionary<int, string>();
@@ -50,7 +70,7 @@ namespace MSSS_Master_File_Project___Dictionary
                         }
                     }
                 }
-                DisplayData(listBox_ReadOnly); // Display entries
+                DisplayData(); // Display entries
             }
             catch (Exception ex)
             {
@@ -59,12 +79,13 @@ namespace MSSS_Master_File_Project___Dictionary
         }
 
         // Question 4.3 - Display Data
-        public void DisplayData(ListBox list)
+        public void DisplayData()
         {
             listBox_ReadOnly.Items.Clear();
             foreach (var record in MasterFile) // Go through each dictionary entry
             {
-                list.Items.Add(string.Format("{0} {1}", record.Key, record.Value)); // Add each dictionary key into the unselectable listbox
+                listBox_ReadOnly.Items.Add(string.Format("{0} {1}", record.Key, record.Value)); // Add each dictionary key into the unselectable listbox
+                listBox_Selectable.Items.Add(record.Value);
             }
             Unsubscribe_Text_Change();
             textBox_Search_Key.Clear();
@@ -252,9 +273,8 @@ namespace MSSS_Master_File_Project___Dictionary
                     }
                 }
             }
-
             // Display the list of entries in the dictionary
-            DisplayData(listBox_ReadOnly);
+            DisplayData();
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)

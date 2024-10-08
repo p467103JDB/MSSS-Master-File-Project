@@ -1,0 +1,17 @@
+C:\Users\p467103\Desktop\MSSS Master File Project - Sorted Dictionary\MSSS Master File Project - Sorted Dictionary\bin\Debug\net8.0-windows\MSSS Master File Project - Sorted Dictionary.exe
+C:\Users\p467103\Desktop\MSSS Master File Project - Sorted Dictionary\MSSS Master File Project - Sorted Dictionary\bin\Debug\net8.0-windows\MSSS Master File Project - Sorted Dictionary.deps.json
+C:\Users\p467103\Desktop\MSSS Master File Project - Sorted Dictionary\MSSS Master File Project - Sorted Dictionary\bin\Debug\net8.0-windows\MSSS Master File Project - Sorted Dictionary.runtimeconfig.json
+C:\Users\p467103\Desktop\MSSS Master File Project - Sorted Dictionary\MSSS Master File Project - Sorted Dictionary\bin\Debug\net8.0-windows\MSSS Master File Project - Sorted Dictionary.dll
+C:\Users\p467103\Desktop\MSSS Master File Project - Sorted Dictionary\MSSS Master File Project - Sorted Dictionary\bin\Debug\net8.0-windows\MSSS Master File Project - Sorted Dictionary.pdb
+C:\Users\p467103\Desktop\MSSS Master File Project - Sorted Dictionary\MSSS Master File Project - Sorted Dictionary\obj\Debug\net8.0-windows\MSSS_Master_File_Project___Sorted_Dictionary.Form12.resources
+C:\Users\p467103\Desktop\MSSS Master File Project - Sorted Dictionary\MSSS Master File Project - Sorted Dictionary\obj\Debug\net8.0-windows\MSSS_Master_File_Project___Sorted_Dictionary.Form22.resources
+C:\Users\p467103\Desktop\MSSS Master File Project - Sorted Dictionary\MSSS Master File Project - Sorted Dictionary\obj\Debug\net8.0-windows\MSSS Master File Project - Sorted Dictionary.csproj.GenerateResource.cache
+C:\Users\p467103\Desktop\MSSS Master File Project - Sorted Dictionary\MSSS Master File Project - Sorted Dictionary\obj\Debug\net8.0-windows\MSSS Master File Project - Sorted Dictionary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\p467103\Desktop\MSSS Master File Project - Sorted Dictionary\MSSS Master File Project - Sorted Dictionary\obj\Debug\net8.0-windows\MSSS Master File Project - Sorted Dictionary.AssemblyInfoInputs.cache
+C:\Users\p467103\Desktop\MSSS Master File Project - Sorted Dictionary\MSSS Master File Project - Sorted Dictionary\obj\Debug\net8.0-windows\MSSS Master File Project - Sorted Dictionary.AssemblyInfo.cs
+C:\Users\p467103\Desktop\MSSS Master File Project - Sorted Dictionary\MSSS Master File Project - Sorted Dictionary\obj\Debug\net8.0-windows\MSSS Master File Project - Sorted Dictionary.csproj.CoreCompileInputs.cache
+C:\Users\p467103\Desktop\MSSS Master File Project - Sorted Dictionary\MSSS Master File Project - Sorted Dictionary\obj\Debug\net8.0-windows\MSSS Master File Project - Sorted Dictionary.dll
+C:\Users\p467103\Desktop\MSSS Master File Project - Sorted Dictionary\MSSS Master File Project - Sorted Dictionary\obj\Debug\net8.0-windows\refint\MSSS Master File Project - Sorted Dictionary.dll
+C:\Users\p467103\Desktop\MSSS Master File Project - Sorted Dictionary\MSSS Master File Project - Sorted Dictionary\obj\Debug\net8.0-windows\MSSS Master File Project - Sorted Dictionary.pdb
+C:\Users\p467103\Desktop\MSSS Master File Project - Sorted Dictionary\MSSS Master File Project - Sorted Dictionary\obj\Debug\net8.0-windows\MSSS Master File Project - Sorted Dictionary.genruntimeconfig.cache
+C:\Users\p467103\Desktop\MSSS Master File Project - Sorted Dictionary\MSSS Master File Project - Sorted Dictionary\obj\Debug\net8.0-windows\ref\MSSS Master File Project - Sorted Dictionary.dll
