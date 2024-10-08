@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             textBox_Search_Key = new TextBox();
             textBox_Search_Value = new TextBox();
             button_remove = new Button();
@@ -40,12 +41,16 @@
             button_Save_Close = new Button();
             button_Edit = new Button();
             button_Add = new Button();
+            label_Selectable = new Label();
+            label3 = new Label();
+            toolTip1 = new ToolTip(components);
             statusStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // textBox_Search_Key
             // 
             textBox_Search_Key.Location = new Point(440, 182);
+            textBox_Search_Key.MaxLength = 9;
             textBox_Search_Key.Name = "textBox_Search_Key";
             textBox_Search_Key.ReadOnly = true;
             textBox_Search_Key.Size = new Size(197, 23);
@@ -127,6 +132,7 @@
             button_Save_Close.Size = new Size(84, 23);
             button_Save_Close.TabIndex = 13;
             button_Save_Close.Text = "Save and Exit";
+            toolTip1.SetToolTip(button_Save_Close, "Press ALT + L to save and exit");
             button_Save_Close.UseVisualStyleBackColor = true;
             button_Save_Close.Click += button_Save_Close_Click;
             // 
@@ -150,12 +156,34 @@
             button_Add.UseVisualStyleBackColor = true;
             button_Add.Click += button_Add_Click;
             // 
+            // label_Selectable
+            // 
+            label_Selectable.AutoSize = true;
+            label_Selectable.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label_Selectable.Location = new Point(256, 48);
+            label_Selectable.Name = "label_Selectable";
+            label_Selectable.Size = new Size(96, 17);
+            label_Selectable.TabIndex = 17;
+            label_Selectable.Text = "Selectable List";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Location = new Point(32, 48);
+            label3.Name = "label3";
+            label3.Size = new Size(121, 17);
+            label3.TabIndex = 16;
+            label3.Text = "Full list - readonly";
+            // 
             // Form2_Admin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             ControlBox = false;
+            Controls.Add(label_Selectable);
+            Controls.Add(label3);
             Controls.Add(button_Add);
             Controls.Add(button_Edit);
             Controls.Add(button_Save_Close);
@@ -193,5 +221,8 @@
         private Button button_Save_Close;
         private Button button_Edit;
         private Button button_Add;
+        private Label label_Selectable;
+        private Label label3;
+        private ToolTip toolTip1;
     }
 }

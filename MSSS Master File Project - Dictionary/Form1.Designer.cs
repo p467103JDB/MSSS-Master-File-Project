@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             listBox_ReadOnly = new ListBox();
             listBox_Selectable = new ListBox();
             textBox_Search_Value = new TextBox();
@@ -40,6 +41,9 @@
             label2 = new Label();
             statusStrip1 = new StatusStrip();
             toolStripStatus = new ToolStripStatusLabel();
+            label3 = new Label();
+            label_Selectable = new Label();
+            toolTip1 = new ToolTip(components);
             menuStrip1.SuspendLayout();
             statusStrip1.SuspendLayout();
             SuspendLayout();
@@ -70,6 +74,7 @@
             textBox_Search_Value.Name = "textBox_Search_Value";
             textBox_Search_Value.Size = new Size(197, 23);
             textBox_Search_Value.TabIndex = 2;
+            toolTip1.SetToolTip(textBox_Search_Value, "Press F4 to clear textbox");
             textBox_Search_Value.TextChanged += textBox_Search_Value_TextChanged;
             // 
             // textBox_Search_Key
@@ -78,6 +83,7 @@
             textBox_Search_Key.Name = "textBox_Search_Key";
             textBox_Search_Key.Size = new Size(197, 23);
             textBox_Search_Key.TabIndex = 3;
+            toolTip1.SetToolTip(textBox_Search_Key, "Press F5 to clear textbox");
             textBox_Search_Key.TextChanged += textBox_Search_Key_TextChanged;
             // 
             // menuStrip1
@@ -99,14 +105,14 @@
             // openFileToolStripMenuItem
             // 
             openFileToolStripMenuItem.Name = "openFileToolStripMenuItem";
-            openFileToolStripMenuItem.Size = new Size(180, 22);
+            openFileToolStripMenuItem.Size = new Size(122, 22);
             openFileToolStripMenuItem.Text = "Open file";
             openFileToolStripMenuItem.Click += openFileToolStripMenuItem_Click;
             // 
             // quitToolStripMenuItem
             // 
             quitToolStripMenuItem.Name = "quitToolStripMenuItem";
-            quitToolStripMenuItem.Size = new Size(180, 22);
+            quitToolStripMenuItem.Size = new Size(122, 22);
             quitToolStripMenuItem.Text = "Quit";
             quitToolStripMenuItem.Click += quitToolStripMenuItem_Click;
             // 
@@ -115,18 +121,18 @@
             label1.AutoSize = true;
             label1.Location = new Point(440, 110);
             label1.Name = "label1";
-            label1.Size = new Size(69, 15);
+            label1.Size = new Size(120, 15);
             label1.TabIndex = 5;
-            label1.Text = "Staff Name:";
+            label1.Text = "Search staff by name:";
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Location = new Point(440, 164);
             label2.Name = "label2";
-            label2.Size = new Size(48, 15);
+            label2.Size = new Size(101, 15);
             label2.TabIndex = 6;
-            label2.Text = "Staff ID:";
+            label2.Text = "Search staff by ID:";
             // 
             // statusStrip1
             // 
@@ -142,11 +148,33 @@
             toolStripStatus.Name = "toolStripStatus";
             toolStripStatus.Size = new Size(0, 17);
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Location = new Point(32, 48);
+            label3.Name = "label3";
+            label3.Size = new Size(121, 17);
+            label3.TabIndex = 8;
+            label3.Text = "Full list - readonly";
+            // 
+            // label_Selectable
+            // 
+            label_Selectable.AutoSize = true;
+            label_Selectable.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label_Selectable.Location = new Point(256, 48);
+            label_Selectable.Name = "label_Selectable";
+            label_Selectable.Size = new Size(105, 17);
+            label_Selectable.TabIndex = 9;
+            label_Selectable.Text = "Selectable List -";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label_Selectable);
+            Controls.Add(label3);
             Controls.Add(statusStrip1);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -182,5 +210,8 @@
         private Label label2;
         private StatusStrip statusStrip1;
         private ToolStripStatusLabel toolStripStatus;
+        private Label label3;
+        private Label label_Selectable;
+        private ToolTip toolTip1;
     }
 }

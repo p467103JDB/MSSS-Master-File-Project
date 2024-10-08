@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
 using static System.ComponentModel.Design.ObjectSelectorEditor;
@@ -18,7 +19,7 @@ namespace MSSS_Master_File_Project___Dictionary
         
         // Global Variables
         #region Global Variables
-        private Form2_Admin form2Admin;         // Create and hold and instance of Form2_Admin
+        private Form2_Admin form2Admin;         // Create and hold an instance of Form2_Admin
         private string previousPath;            // Get file path of the loaded CSV
         public static bool showdialog = false;  // Checks the duplication of dialog windows 
         #endregion
@@ -33,21 +34,18 @@ namespace MSSS_Master_File_Project___Dictionary
                 if (dialog.ShowDialog() == DialogResult.OK) // if user clicked OK then read csv
                 {
                     MasterFile.Clear();
-                    foreach (string path in dialog.FileNames)
+                    previousPath = dialog.FileName; // Collect the previous location
+                    using (StreamReader reader = new StreamReader(dialog.FileName))
                     {
-                        previousPath = path; // Collect the previous location
-                        using (StreamReader reader = new StreamReader(path))
+                        while (!reader.EndOfStream)
                         {
-                            while (!reader.EndOfStream)
+                            var line = reader.ReadLine(); // read current line of csv
+                            if (line != ",") // The CSV has many ',' at the end of the file - this will ignore that error
                             {
-                                var line = reader.ReadLine(); // read current line of csv
-                                if (line != ",") // The CSV has many ',' at the end of the file - this will ignore that error
-                                {
-                                    var values = line.Split(','); // Split the data into: 
-                                    int num = int.Parse(values[0]); // Key
-                                    string name = values[1]; // Value
-                                    MasterFile.Add(num, name); // Add Key and Value
-                                }
+                                var values = line.Split(','); // Split the data into: 
+                                int num = int.Parse(values[0]); // Key
+                                string name = values[1]; // Value
+                                MasterFile.Add(num, name); // Add Key and Value
                             }
                         }
                     }
@@ -63,10 +61,15 @@ namespace MSSS_Master_File_Project___Dictionary
         // Question 4.3 - Display Data
         public void DisplayData(ListBox list)
         {
+            listBox_ReadOnly.Items.Clear();
             foreach (var record in MasterFile) // Go through each dictionary entry
             {
                 list.Items.Add(string.Format("{0} {1}", record.Key, record.Value)); // Add each dictionary key into the unselectable listbox
             }
+            Unsubscribe_Text_Change();
+            textBox_Search_Key.Clear();
+            textBox_Search_Value.Clear();
+            Subscribe_Text_Change();
         }
 
         // Question 4.4 - Textbox Search Value
@@ -77,6 +80,11 @@ namespace MSSS_Master_File_Project___Dictionary
         /// <param name="e"></param>
         private void textBox_Search_Value_TextChanged(object sender, EventArgs e)
         {
+            if (label_Selectable.Text != "Selectable List - by Name")
+            {
+                label_Selectable.Text = "Selectable List - by Name";
+            }
+
             listBox_Selectable.Items.Clear(); // Clear listbox
             string search = textBox_Search_Value.Text; // Get text from textbox
 
@@ -97,12 +105,18 @@ namespace MSSS_Master_File_Project___Dictionary
         /// <param name="e"></param>
         private void textBox_Search_Key_TextChanged(object sender, EventArgs e)
         {
+            // Change label title
+            if (label_Selectable.Text != "Selectable List - by Key")
+            {
+                label_Selectable.Text = "Selectable List - by Key";
+            }
+
             listBox_Selectable.Items.Clear(); // Clear listbox
             string search = textBox_Search_Key.Text; // Get text from textbox
 
             foreach (var record in MasterFile) // Go through each entry
             {
-                if (record.Key.ToString().Contains(search)) // If the record contains any of these numbers in that order
+                if (record.Key.ToString().StartsWith(search)) // If the record contains any of these numbers in that order
                 {
                     listBox_Selectable.Items.Add(record.Key); // Add to the selectable listbox
                 }
@@ -126,63 +140,37 @@ namespace MSSS_Master_File_Project___Dictionary
         /// This method checks to see if the index has been changed.
         /// When the index has changed it will display the entry's key and value in the specified textboxes
         /// To do this without flagging the TextChanged methods, i need to temporarily disable the method and then reenable them after.
-        /// this prevents all sorts of things going wrong, for starters, duplicates will show up and only display one number because its the first found in the list of many.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         #region Question 4.8 Filter Records
         private void listBox_Selectable_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string selected = listBox_Selectable.SelectedItem.ToString();
-            int selectedIndex = listBox_Selectable.SelectedIndex;
+            // Change label title
+            if (label_Selectable.Text != "Selectable List - by Index")
+            {
+                label_Selectable.Text = "Selectable List - by Index";
+            }
+            
+            int selectedkey = listBox_Selectable.SelectedIndex;
+            string selected = listBox_Selectable.Items[selectedkey].ToString();
 
-            int value;
             // Search by Key
-            if (int.TryParse(selected, out value))
+            if (int.TryParse(selected, out int value))
             {
                 Unsubscribe_Text_Change();
                 textBox_Search_Key.Text = selected;
                 textBox_Search_Value.Text = MasterFile[value];
                 Subscribe_Text_Change();
             }
-            else // Search by Value
+            else
             {
-                // Find the amount of duplicates in the selectable listbox
-                int duplicates = CountDuplicates(selected, selectedIndex);
-
-                // Iterate through the masterfile entries to find the correct staff name to key pair.
-                int duplicatesChecker = 0;
-                foreach (var record in MasterFile)
-                {
-                    // If the record value matches the selected entry's string  then check to see if the duplicate amount has been matched
-                    // Otherwise iterate through the masterfle list until it has.
-                    if (record.Value == selected)
-                    {
-                        if (duplicates == duplicatesChecker)
-                        {
-                            Unsubscribe_Text_Change();
-                            textBox_Search_Key.Text = record.Key.ToString();
-                            textBox_Search_Value.Text = selected;
-                            Subscribe_Text_Change();
-                            break; // find the match and GTFO
-                        }
-                        duplicatesChecker++;
-                    }
-                }
+                // Quick way of getting the element at the selected index
+                Unsubscribe_Text_Change();
+                textBox_Search_Key.Text = MasterFile.ElementAt(selectedkey).Key.ToString();
+                textBox_Search_Value.Text = selected;
+                Subscribe_Text_Change();
             }
-        }
-
-        private int CountDuplicates(string selected, int selectedIndex)
-        {
-            int duplicates = 0;
-            for (int i = 0; i < selectedIndex; i++)
-            {
-                if (listBox_Selectable.Items[i].ToString() == selected)
-                {
-                    duplicates++;
-                }
-            }
-            return duplicates;
         }
 
         private void Unsubscribe_Text_Change()
@@ -213,13 +201,16 @@ namespace MSSS_Master_File_Project___Dictionary
                     // If the textkey is exactly 77 then initialize add mode
                     if (textKey == 77 && previousPath != null) // OPEN ADMIN INTERFACE - ADD MODE
                     {
+                        toolStripStatus.Text = "Opened Admin Interface - Add Mode";
                         form2Admin = new Form2_Admin(textBox_Search_Key.Text, MasterFile, previousPath);
                         Display_And_Dispose(form2Admin);
                     }
                     // If the Key textbox is not null and the number is a match in the masterfile keys then:
                     else if (MasterFile.Keys.Contains(textKey)) // OPEN ADMIN INTERFACE - EDIT & DELETE MODE
                     {
-                        form2Admin = new Form2_Admin(textKey, MasterFile, previousPath);
+                        toolStripStatus.Text = "Opened Admin Interface - Edit Mode";
+
+                        form2Admin = new Form2_Admin(textKey, listBox_Selectable.SelectedIndex, MasterFile, previousPath);
                         Display_And_Dispose(form2Admin);
                     }
                     else
@@ -228,16 +219,15 @@ namespace MSSS_Master_File_Project___Dictionary
                         return;
                     }
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
-                    toolStripStatus.Text = "Admin Interface Access: Denied - Key not valid";
+                    toolStripStatus.Text = "Admin Interface Access: Denied - Key not valid ";
                 }
             }
         }
 
         private void Display_And_Dispose(Form2_Admin form2Admin)
         {
-            toolStripStatus.Text = "Opened Admin Interface";
             form2Admin.ShowDialog(); // Display form2 as a dialog
             form2Admin.Dispose(); // Dispose form2 when done - save nothing
             showdialog = true; // set the global show dialog variable to true 
@@ -262,11 +252,6 @@ namespace MSSS_Master_File_Project___Dictionary
                     }
                 }
             }
-            // Clear textboxes without activating text_change methods
-            Unsubscribe_Text_Change();
-            textBox_Search_Key.Clear();
-            textBox_Search_Value.Clear();
-            Subscribe_Text_Change();
 
             // Display the list of entries in the dictionary
             DisplayData(listBox_ReadOnly);
