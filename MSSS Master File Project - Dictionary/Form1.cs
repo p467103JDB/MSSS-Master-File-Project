@@ -5,25 +5,26 @@ using static System.ComponentModel.Design.ObjectSelectorEditor;
 
 namespace MSSS_Master_File_Project___Dictionary
 {
+    /// <summary>
+    /// Project Details ///
+    /// Student ID: P467103
+    /// Student Name: JACK DU BOULAY
+    /// 
+    /// Program Explanation ///
+    /// This Program showcases how to use a .csv file.
+    /// It demonstrates how to open and read a csv file as well as write to one.
+    /// The program also shows how to use an unsorted dictionary using key value pairs.
+    /// 
+    /// Program Keyboard Shortcuts ///
+    /// F4          - Clears Value textbox
+    /// F5          - Clears Key textbox
+    /// Alt + A     - Access Admin GUI Edit Mode (Select an index to use the edit function) <--- IMPORTANT
+    /// Alt + A     - Access Admin GUI Add Mode (MUST Type 77 in the key textbox) <--- IMPORTANT
+    /// 
+    /// </summary>
+
     public partial class Form1 : Form
     {
-        /// <summary>
-        /// Project Details ///
-        /// Student ID: P467103
-        /// Student Name: JACK DU BOULAY
-        /// 
-        /// Program Explanation ///
-        /// This Program showcases how to use a .csv file.
-        /// It demonstrates how to open and read a csv file as well as write to one.
-        /// The program also shows how to use an unsorted dictionary using key value pairs.
-        /// 
-        /// Program Keyboard Shortcuts ///
-        /// F4 - Clears Value textbox
-        /// F5 - Clears Key textbox
-        /// Alt + A - Access Admin GUI Edit Mode (Select an index to use the edit function) <--- IMPORTANT
-        /// Alt + A - Access Admin GUI Add Mode (Type 77 in the key textbox) <--- IMPORTANT
-        /// 
-        /// </summary>
 
         public Form1()
         {
@@ -85,7 +86,7 @@ namespace MSSS_Master_File_Project___Dictionary
             foreach (var record in MasterFile) // Go through each dictionary entry
             {
                 listBox_ReadOnly.Items.Add(string.Format("{0} {1}", record.Key, record.Value)); // Add each dictionary key into the unselectable listbox
-                listBox_Selectable.Items.Add(record.Value);
+                listBox_Selectable.Items.Add(record.Value); // add each dictionary key balue into the selectable listbox
             }
             Unsubscribe_Text_Change();
             textBox_Search_Key.Clear();

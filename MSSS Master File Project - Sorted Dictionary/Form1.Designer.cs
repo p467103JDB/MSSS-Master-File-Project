@@ -1,6 +1,6 @@
 ﻿namespace MSSS_Master_File_Project___Sorted_Dictionary
 {
-    partial class Form12
+    partial class Form1
     {
         /// <summary>
         /// Required designer variable.

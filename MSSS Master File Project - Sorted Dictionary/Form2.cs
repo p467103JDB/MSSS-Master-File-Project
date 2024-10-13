@@ -8,9 +8,24 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/// <summary>
+/// Project Details ///
+/// Student ID: P467103
+/// Student Name: JACK DU BOULAY
+/// 
+/// Program Explanation ///
+/// This Program showcases how to use a .csv file.
+/// It demonstrates how to open and read a csv file as well as write to one.
+/// The program also shows how to use an unsorted dictionary using key value pairs.
+/// 
+/// Program Keyboard Shortcuts ///
+/// ALT + L - Save to file and close program. <-- IMPORTANT
+/// 
+/// </summary>
+
 namespace MSSS_Master_File_Project___Sorted_Dictionary
 {
-    public partial class Form22 : Form
+    public partial class Form2 : Form
     {
         public static SortedDictionary<int, string> masterFile;
         private int selectedkey;
@@ -18,7 +33,7 @@ namespace MSSS_Master_File_Project___Sorted_Dictionary
         private readonly string previousPath;
 
         // Constructor 1 - Edit & Delete Mode
-        public Form22(int Key, int index, SortedDictionary<int, string> MasterFile, string PreviousPath)
+        public Form2(int Key, int index, SortedDictionary<int, string> MasterFile, string PreviousPath)
         {
             InitializeComponent();
 
@@ -42,7 +57,7 @@ namespace MSSS_Master_File_Project___Sorted_Dictionary
         }
 
         // Constructor 2 - Add mode
-        public Form22(string newKey, SortedDictionary<int, string> MasterFile, string PreviousPath)
+        public Form2(string newKey, SortedDictionary<int, string> MasterFile, string PreviousPath)
         {
             InitializeComponent();
 
@@ -217,6 +232,7 @@ namespace MSSS_Master_File_Project___Sorted_Dictionary
         }
 
         // Question 5.6 - Save to CSV file.
+        #region Question 5.6 - Save to CSV file
         private void button_Save_Close_Click(object sender, EventArgs e)
         {
             DialogResult dr = MessageBox.Show("Would you like to overwrite the currently opened file?\n" +
@@ -292,6 +308,7 @@ namespace MSSS_Master_File_Project___Sorted_Dictionary
                 txtwriter.Close();
             }
         }
+        #endregion
 
         // Question 5.7 - Close Admin GUI with keyboard shortcut
         private void Form2_Admin_KeyDown(object sender, KeyEventArgs e)  // Key down check - listens for key shortcuts
@@ -301,11 +318,6 @@ namespace MSSS_Master_File_Project___Sorted_Dictionary
             {
                 button_Save_Close_Click(sender, e);
             }
-        }
-
-        private void toolTip1_Popup(object sender, PopupEventArgs e)
-        {
-
         }
     }
 }

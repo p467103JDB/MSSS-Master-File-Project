@@ -9,29 +9,30 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/// <summary>
+/// Project Details ///
+/// Student ID: P467103
+/// Student Name: JACK DU BOULAY
+/// 
+/// Program Explanation ///
+/// This Program showcases how to use a .csv file.
+/// It demonstrates how to open and read a csv file as well as write to one.
+/// The program also shows how to use a sorted dictionary using key value pairs.
+/// 
+/// Program Keyboard Shortcuts ///
+/// F4 - Clears Value textbox
+/// F5 - Clears Key textbox
+/// Alt + A - Access Admin GUI Edit Mode (Select an index to use the edit function) <--- IMPORTANT
+/// Alt + A - Access Admin GUI Add Mode (Type 77 in the key textbox) <--- IMPORTANT
+/// 
+/// </summary>
+/// 
+
 namespace MSSS_Master_File_Project___Sorted_Dictionary
 {
-    public partial class Form12 : Form
+    public partial class Form1 : Form
     {
-        /// <summary>
-        /// Project Details ///
-        /// Student ID: P467103
-        /// Student Name: JACK DU BOULAY
-        /// 
-        /// Program Explanation ///
-        /// This Program showcases how to use a .csv file.
-        /// It demonstrates how to open and read a csv file as well as write to one.
-        /// The program also shows how to use a sorted dictionary using key value pairs.
-        /// 
-        /// Program Keyboard Shortcuts ///
-        /// F4 - Clears Value textbox
-        /// F5 - Clears Key textbox
-        /// Alt + A - Access Admin GUI Edit Mode (Select an index to use the edit function) <--- IMPORTANT
-        /// Alt + A - Access Admin GUI Add Mode (Type 77 in the key textbox) <--- IMPORTANT
-        /// 
-        /// </summary>
-        /// 
-        public Form12()
+        public Form1()
         {
             InitializeComponent();
             // Set key preview true to allow the key press listener:  https://youtu.be/ogVAU54EQFg?t=360
@@ -45,7 +46,7 @@ namespace MSSS_Master_File_Project___Sorted_Dictionary
 
         // Global Variables
         #region Global Variables
-        private Form22 form2Admin;         // Create and hold an instance of Form2_Admin
+        private Form2 form2Admin;               // Expecting to create and hold an instance of Form2_Admin
         private string previousPath;            // Get file path of the loaded CSV
         public static bool showdialog = false;  // Checks the duplication of dialog windows 
         #endregion
@@ -229,7 +230,7 @@ namespace MSSS_Master_File_Project___Sorted_Dictionary
                     if (textKey == 77 && previousPath != null) // OPEN ADMIN INTERFACE - ADD MODE
                     {
                         toolStripStatus.Text = "Opened Admin Interface - Add Mode";
-                        form2Admin = new Form22(textBox_Search_Key.Text, MasterFile, previousPath);
+                        form2Admin = new Form2(textBox_Search_Key.Text, MasterFile, previousPath);
                         Display_And_Dispose(form2Admin);
                     }
                     // If the Key textbox is not null and the number is a match in the masterfile keys then:
@@ -237,7 +238,7 @@ namespace MSSS_Master_File_Project___Sorted_Dictionary
                     {
                         toolStripStatus.Text = "Opened Admin Interface - Edit Mode";
 
-                        form2Admin = new Form22(textKey, listBox_Selectable.SelectedIndex, MasterFile, previousPath);
+                        form2Admin = new Form2(textKey, listBox_Selectable.SelectedIndex, MasterFile, previousPath);
                         Display_And_Dispose(form2Admin);
                     }
                     else
@@ -253,7 +254,7 @@ namespace MSSS_Master_File_Project___Sorted_Dictionary
             }
         }
 
-        private void Display_And_Dispose(Form22 form2Admin)
+        private void Display_And_Dispose(Form2 form2Admin)
         {
             form2Admin.ShowDialog(); // Display form2 as a dialog
             form2Admin.Dispose(); // Dispose form2 when done - save nothing
@@ -288,9 +289,9 @@ namespace MSSS_Master_File_Project___Sorted_Dictionary
         {
             // Clear staff name textbox (F4)
             if (e.KeyCode == Keys.F4)
-            {
+            {   
                 Clear_TextBox_Search_Value();
-            }
+            } 
 
             // Clear staff id textbox (F5)
             if (e.KeyCode == Keys.F5)

@@ -2,13 +2,30 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using static System.ComponentModel.Design.ObjectSelectorEditor;
+
+    /// <summary>
+    /// Project Details ///
+    /// Student ID: P467103
+    /// Student Name: JACK DU BOULAY
+    /// 
+    /// Program Explanation ///
+    /// This Program showcases how to use a .csv file.
+    /// It demonstrates how to open and read a csv file as well as write to one.
+    /// The program also shows how to use an unsorted dictionary using key value pairs.
+    /// 
+    /// Program Keyboard Shortcuts ///
+    /// ALT + L - Save to file and close program. <-- IMPORTANT
+    /// 
+    /// </summary>
 
 namespace MSSS_Master_File_Project___Dictionary
 {
@@ -219,6 +236,7 @@ namespace MSSS_Master_File_Project___Dictionary
         }
 
         // Question 5.6 - Save to CSV file.
+        #region Question 5.6 Save to CSV
         private void button_Save_Close_Click(object sender, EventArgs e)
         {
             DialogResult dr = MessageBox.Show("Would you like to overwrite the currently opened file?\n" +
@@ -233,9 +251,9 @@ namespace MSSS_Master_File_Project___Dictionary
                     }
                     try
                     {
-                        Save_To_File(previousPath);
-                        DialogResult _ = MessageBox.Show("File has been saved.\nFile will Automatically Load in General UI", "Alert", MessageBoxButtons.OK);
-                        this.Close();
+                        Save_To_File(previousPath); // Save file - overwrites previously opened
+                        DialogResult _ = MessageBox.Show("File has been saved.\nFile will Automatically Load in General UI", "Alert", MessageBoxButtons.OK); // alert user that the save was successful
+                        this.Close(); // close form
                     }
                     catch (Exception ex)
                     {
@@ -244,21 +262,21 @@ namespace MSSS_Master_File_Project___Dictionary
                     }
                     break;
                     
-                case DialogResult.No:
+                case DialogResult.No: 
                     // Create new csv file
-                    using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+                    using (SaveFileDialog saveFileDialog = new SaveFileDialog()) // Open new save file dialog
                     {
                         saveFileDialog.Filter = "CSV files|*.csv";
                         saveFileDialog.Title = "Save Data File";
                         saveFileDialog.DefaultExt = "csv";
 
-                        if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                        if (saveFileDialog.ShowDialog() == DialogResult.OK) // If selected OK
                         {
                             try
                             {
-                                Save_To_File(saveFileDialog.FileName);
-                                DialogResult _ = MessageBox.Show("File has been saved.\nPlease open file in the General UI", "Alert", MessageBoxButtons.OK);
-                                this.Close();// Close program
+                                Save_To_File(saveFileDialog.FileName); // Save file with filename given
+                                DialogResult _ = MessageBox.Show("File has been saved.\nPlease open file in the General UI", "Alert", MessageBoxButtons.OK); // alert user that it has been completed
+                                this.Close();// Close form
                             }
                             catch (Exception ex)
                             {
@@ -281,25 +299,22 @@ namespace MSSS_Master_File_Project___Dictionary
 
         private void Save_To_File(string fileName)
         {
-            using (StreamWriter txtwriter = new StreamWriter(fileName))
+            using (var txtWriter = new StreamWriter(fileName)) // open streamwriter
             {
-                foreach (var entry in masterFile)
+                foreach (var entry in masterFile) // go through all entries in the dictionary
                 {
-                    string key = entry.Key.ToString();
-                    string value = entry.Value;
-                    string line = string.Format("{0},{1}", key, value);
-
-                    txtwriter.WriteLine(line);
+                    string line = $"{entry.Key},{entry.Value}"; // format string with these values
+                    txtWriter.WriteLine(line); // add line to .csv file selected
                 }
-                txtwriter.Close();
-            }
+            } // Closes stream writer
         }
+        #endregion
 
-       // Question 5.7 - Close Admin GUI with keyboard shortcut
+        // Question 5.7 - Close Admin GUI with keyboard shortcut
         private void Form2_Admin_KeyDown(object sender, KeyEventArgs e)  // Key down check - listens for key shortcuts
         {
             // Switch to General GUI - (ALT + L)
-            if (e.KeyCode == Keys.L && ModifierKeys.HasFlag(Keys.Alt)) // https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.control.modifierkeys?view=windowsdesktop-8.0
+            if (e.KeyCode == Keys.L && ModifierKeys.HasFlag(Keys.Alt)) 
             {
                 button_Save_Close_Click(sender, e);
             }

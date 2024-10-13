@@ -14,24 +14,6 @@ C:\Users\p467103\Desktop\MSSS Master File Project - Dictionary\MSSS Master File 
 C:\Users\p467103\Desktop\MSSS Master File Project - Dictionary\MSSS Master File Project - Dictionary\obj\Debug\net8.0-windows\MSSS Master File Project - Dictionary.pdb
 C:\Users\p467103\Desktop\MSSS Master File Project - Dictionary\MSSS Master File Project - Dictionary\obj\Debug\net8.0-windows\MSSS Master File Project - Dictionary.genruntimeconfig.cache
 C:\Users\p467103\Desktop\MSSS Master File Project - Dictionary\MSSS Master File Project - Dictionary\obj\Debug\net8.0-windows\ref\MSSS Master File Project - Dictionary.dll
-D:\GitHub Clones\MSSS-Master-File-Project\MSSS Master File Project - Dictionary\bin\Debug\net8.0-windows\MSSS Master File Project - Dictionary.exe
-D:\GitHub Clones\MSSS-Master-File-Project\MSSS Master File Project - Dictionary\bin\Debug\net8.0-windows\MSSS Master File Project - Dictionary.deps.json
-D:\GitHub Clones\MSSS-Master-File-Project\MSSS Master File Project - Dictionary\bin\Debug\net8.0-windows\MSSS Master File Project - Dictionary.runtimeconfig.json
-D:\GitHub Clones\MSSS-Master-File-Project\MSSS Master File Project - Dictionary\bin\Debug\net8.0-windows\MSSS Master File Project - Dictionary.dll
-D:\GitHub Clones\MSSS-Master-File-Project\MSSS Master File Project - Dictionary\bin\Debug\net8.0-windows\MSSS Master File Project - Dictionary.pdb
-D:\GitHub Clones\MSSS-Master-File-Project\MSSS Master File Project - Dictionary\obj\Debug\net8.0-windows\MSSS_Master_File_Project___Dictionary.Form1.resources
-D:\GitHub Clones\MSSS-Master-File-Project\MSSS Master File Project - Dictionary\obj\Debug\net8.0-windows\MSSS Master File Project - Dictionary.csproj.GenerateResource.cache
-D:\GitHub Clones\MSSS-Master-File-Project\MSSS Master File Project - Dictionary\obj\Debug\net8.0-windows\MSSS Master File Project - Dictionary.GeneratedMSBuildEditorConfig.editorconfig
-D:\GitHub Clones\MSSS-Master-File-Project\MSSS Master File Project - Dictionary\obj\Debug\net8.0-windows\MSSS Master File Project - Dictionary.AssemblyInfoInputs.cache
-D:\GitHub Clones\MSSS-Master-File-Project\MSSS Master File Project - Dictionary\obj\Debug\net8.0-windows\MSSS Master File Project - Dictionary.AssemblyInfo.cs
-D:\GitHub Clones\MSSS-Master-File-Project\MSSS Master File Project - Dictionary\obj\Debug\net8.0-windows\MSSS Master File Project - Dictionary.csproj.CoreCompileInputs.cache
-D:\GitHub Clones\MSSS-Master-File-Project\MSSS Master File Project - Dictionary\obj\Debug\net8.0-windows\MSSS Master File Project - Dictionary.sourcelink.json
-D:\GitHub Clones\MSSS-Master-File-Project\MSSS Master File Project - Dictionary\obj\Debug\net8.0-windows\MSSS Master File Project - Dictionary.dll
-D:\GitHub Clones\MSSS-Master-File-Project\MSSS Master File Project - Dictionary\obj\Debug\net8.0-windows\refint\MSSS Master File Project - Dictionary.dll
-D:\GitHub Clones\MSSS-Master-File-Project\MSSS Master File Project - Dictionary\obj\Debug\net8.0-windows\MSSS Master File Project - Dictionary.pdb
-D:\GitHub Clones\MSSS-Master-File-Project\MSSS Master File Project - Dictionary\obj\Debug\net8.0-windows\MSSS Master File Project - Dictionary.genruntimeconfig.cache
-D:\GitHub Clones\MSSS-Master-File-Project\MSSS Master File Project - Dictionary\obj\Debug\net8.0-windows\ref\MSSS Master File Project - Dictionary.dll
-D:\GitHub Clones\MSSS-Master-File-Project\MSSS Master File Project - Dictionary\obj\Debug\net8.0-windows\MSSS_Master_File_Project___Dictionary.Form2_Admin.resources
 C:\Users\p467103\Documents\GitHub\MSSS-Master-File-Project\MSSS Master File Project - Dictionary\bin\Debug\net8.0-windows\MSSS Master File Project - Dictionary.exe
 C:\Users\p467103\Documents\GitHub\MSSS-Master-File-Project\MSSS Master File Project - Dictionary\bin\Debug\net8.0-windows\MSSS Master File Project - Dictionary.deps.json
 C:\Users\p467103\Documents\GitHub\MSSS-Master-File-Project\MSSS Master File Project - Dictionary\bin\Debug\net8.0-windows\MSSS Master File Project - Dictionary.runtimeconfig.json
@@ -50,3 +32,21 @@ C:\Users\p467103\Documents\GitHub\MSSS-Master-File-Project\MSSS Master File Proj
 C:\Users\p467103\Documents\GitHub\MSSS-Master-File-Project\MSSS Master File Project - Dictionary\obj\Debug\net8.0-windows\MSSS Master File Project - Dictionary.pdb
 C:\Users\p467103\Documents\GitHub\MSSS-Master-File-Project\MSSS Master File Project - Dictionary\obj\Debug\net8.0-windows\MSSS Master File Project - Dictionary.genruntimeconfig.cache
 C:\Users\p467103\Documents\GitHub\MSSS-Master-File-Project\MSSS Master File Project - Dictionary\obj\Debug\net8.0-windows\ref\MSSS Master File Project - Dictionary.dll
+D:\GitHub Clones\MSSS-Master-File-Project\MSSS Master File Project - Dictionary\bin\Debug\net8.0-windows\MSSS Master File Project - Dictionary.exe
+D:\GitHub Clones\MSSS-Master-File-Project\MSSS Master File Project - Dictionary\bin\Debug\net8.0-windows\MSSS Master File Project - Dictionary.deps.json
+D:\GitHub Clones\MSSS-Master-File-Project\MSSS Master File Project - Dictionary\bin\Debug\net8.0-windows\MSSS Master File Project - Dictionary.runtimeconfig.json
+D:\GitHub Clones\MSSS-Master-File-Project\MSSS Master File Project - Dictionary\bin\Debug\net8.0-windows\MSSS Master File Project - Dictionary.dll
+D:\GitHub Clones\MSSS-Master-File-Project\MSSS Master File Project - Dictionary\bin\Debug\net8.0-windows\MSSS Master File Project - Dictionary.pdb
+D:\GitHub Clones\MSSS-Master-File-Project\MSSS Master File Project - Dictionary\obj\Debug\net8.0-windows\MSSS_Master_File_Project___Dictionary.Form1.resources
+D:\GitHub Clones\MSSS-Master-File-Project\MSSS Master File Project - Dictionary\obj\Debug\net8.0-windows\MSSS_Master_File_Project___Dictionary.Form2_Admin.resources
+D:\GitHub Clones\MSSS-Master-File-Project\MSSS Master File Project - Dictionary\obj\Debug\net8.0-windows\MSSS Master File Project - Dictionary.csproj.GenerateResource.cache
+D:\GitHub Clones\MSSS-Master-File-Project\MSSS Master File Project - Dictionary\obj\Debug\net8.0-windows\MSSS Master File Project - Dictionary.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub Clones\MSSS-Master-File-Project\MSSS Master File Project - Dictionary\obj\Debug\net8.0-windows\MSSS Master File Project - Dictionary.AssemblyInfoInputs.cache
+D:\GitHub Clones\MSSS-Master-File-Project\MSSS Master File Project - Dictionary\obj\Debug\net8.0-windows\MSSS Master File Project - Dictionary.AssemblyInfo.cs
+D:\GitHub Clones\MSSS-Master-File-Project\MSSS Master File Project - Dictionary\obj\Debug\net8.0-windows\MSSS Master File Project - Dictionary.csproj.CoreCompileInputs.cache
+D:\GitHub Clones\MSSS-Master-File-Project\MSSS Master File Project - Dictionary\obj\Debug\net8.0-windows\MSSS Master File Project - Dictionary.sourcelink.json
+D:\GitHub Clones\MSSS-Master-File-Project\MSSS Master File Project - Dictionary\obj\Debug\net8.0-windows\MSSS Master File Project - Dictionary.dll
+D:\GitHub Clones\MSSS-Master-File-Project\MSSS Master File Project - Dictionary\obj\Debug\net8.0-windows\refint\MSSS Master File Project - Dictionary.dll
+D:\GitHub Clones\MSSS-Master-File-Project\MSSS Master File Project - Dictionary\obj\Debug\net8.0-windows\MSSS Master File Project - Dictionary.pdb
+D:\GitHub Clones\MSSS-Master-File-Project\MSSS Master File Project - Dictionary\obj\Debug\net8.0-windows\MSSS Master File Project - Dictionary.genruntimeconfig.cache
+D:\GitHub Clones\MSSS-Master-File-Project\MSSS Master File Project - Dictionary\obj\Debug\net8.0-windows\ref\MSSS Master File Project - Dictionary.dll
